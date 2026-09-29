@@ -1,0 +1,42 @@
+input=C:\Users\tongb\Desktop\佟邦本\毕业设计\Chapter4_RandLA_Net\annotation\Tile_37_annotation_005m.las
+points=3257310
+
+0 未分类: 0 (0.00%)
+1 建筑物: 220076 (6.76%)
+2 道路: 616664 (18.93%)
+3 植被: 1015115 (31.16%)
+4 裸地: 524022 (16.09%)
+5 其他人工设施: 881433 (27.06%)
+
+feature quantiles:
+height: -0.0387, 0.0000, 0.0170, 0.0660, 0.4375, 3.0860, 11.7915
+exg: -0.0742, -0.0352, 0.0039, 0.0313, 0.0586, 0.1406, 0.2422
+brightness: 0.0234, 0.0404, 0.1432, 0.3372, 0.5794, 0.7943, 0.9232
+planarity: 0.0765, 0.2478, 0.6459, 0.8703, 0.9367, 0.9768, 0.9893
+roughness: 0.0004, 0.0013, 0.0042, 0.0101, 0.0232, 0.0631, 0.1027
+verticality: 0.0000, 0.0001, 0.0016, 0.0172, 0.2615, 0.9327, 0.9888
+
+parameters:
+bare_brightness=0.25
+bare_rg=0.015
+building_height=1.5
+building_planarity=0.35
+building_roughness=0.15
+building_saturation=0.18
+building_verticality=0.25
+exg_threshold=0.03
+green_dom_threshold=0.01
+ground_cell=1.0
+ground_height=0.25
+ground_min_points=5
+ground_percentile=5.0
+input=C:\Users\tongb\Desktop\佟邦本\毕业设计\Chapter4_RandLA_Net\annotation\Tile_37_annotation_005m.las
+other_height=0.2
+out_dir=None
+road_brightness=0.45
+road_roughness=0.05
+road_saturation=0.1
+veg_exg=0.01
+veg_height=0.4
+veg_roughness=0.06
+voxel=0.5

@@ -1,0 +1,42 @@
+input=C:\Users\tongb\Desktop\佟邦本\毕业设计\第四章_多样本训练\瓦片样本\Tile_74_sample_005m.las
+points=5871022
+
+0 未分类: 0 (0.00%)
+1 建筑物: 1611976 (27.46%)
+2 道路: 808015 (13.76%)
+3 植被: 1494603 (25.46%)
+4 裸地: 532464 (9.07%)
+5 其他人工设施: 1423964 (24.25%)
+
+feature quantiles:
+height: -0.2454, 0.0000, 0.0650, 0.4480, 4.2410, 22.8722, 32.1537
+exg: -0.0625, -0.0313, 0.0039, 0.0352, 0.0742, 0.2383, 0.3906
+brightness: 0.0508, 0.0820, 0.1693, 0.3438, 0.5651, 0.9597, 0.9922
+planarity: 0.0717, 0.2200, 0.5884, 0.7992, 0.9029, 0.9628, 0.9829
+roughness: 0.0003, 0.0010, 0.0051, 0.0108, 0.0225, 0.0569, 0.0966
+verticality: 0.0002, 0.0012, 0.0232, 0.3153, 0.8568, 0.9845, 0.9969
+
+parameters:
+bare_brightness=0.25
+bare_rg=0.015
+building_height=1.5
+building_planarity=0.35
+building_roughness=0.15
+building_saturation=0.18
+building_verticality=0.25
+exg_threshold=0.03
+green_dom_threshold=0.01
+ground_cell=1.0
+ground_height=0.25
+ground_min_points=5
+ground_percentile=5.0
+input=C:\Users\tongb\Desktop\佟邦本\毕业设计\第四章_多样本训练\瓦片样本\Tile_74_sample_005m.las
+other_height=0.2
+out_dir=C:\Users\tongb\Desktop\佟邦本\毕业设计\第四章_多样本训练\预分类\Tile_74
+road_brightness=0.45
+road_roughness=0.05
+road_saturation=0.1
+veg_exg=0.01
+veg_height=0.4
+veg_roughness=0.06
+voxel=0.5

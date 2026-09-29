@@ -1,0 +1,14 @@
+{
+  "before": {
+    "targets": 2,
+    "targets_area_ge_50m2": 0,
+    "total_area": 32.1,
+    "big_targets": []
+  },
+  "after": {
+    "targets": 1,
+    "targets_area_ge_50m2": 0,
+    "total_area": 9.3,
+    "big_targets": []
+  }
+}

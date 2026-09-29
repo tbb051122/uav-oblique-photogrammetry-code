@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 大型数据与中间结果（见 DATA.md）
+*.las
+*.laz
+*.npz
+*.npy
+*.pth
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 输出目录（运行时生成）
+Chapter3_Image_Filter/output/
+Chapter3_Image_Filter/demo_data/output/
+Chapter4_RandLA_Net/models/
+Chapter4_RandLA_Net/data/

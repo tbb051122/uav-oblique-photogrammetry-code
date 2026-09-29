@@ -1,0 +1,94 @@
+{
+  "production": {
+    "before": {
+      "tiles": 111,
+      "points": 5582679684,
+      "bytes": 145149795993
+    },
+    "after": {
+      "tiles": 74,
+      "points": 5199610515,
+      "bytes": 135189956196
+    }
+  },
+  "tiles": [
+    {
+      "tile": "Tile_27",
+      "extent": "65.8×82.6",
+      "raw_before": 22328136,
+      "raw_after": 21700324,
+      "voxel_before": 3826568,
+      "voxel_after": 3739618,
+      "oa_before": 0.648923850850229,
+      "oa_after": 0.6484729188917157,
+      "macc_before": 0.4938109226728301,
+      "macc_after": 0.4869547636434759,
+      "miou_before": 0.3347891579274904,
+      "miou_after": 0.3291172656455572,
+      "matched_before": 3483532,
+      "matched_after": 3739618
+    },
+    {
+      "tile": "Tile_37",
+      "extent": "65.8×82.6",
+      "raw_before": 20032878,
+      "raw_after": 19504611,
+      "voxel_before": 3313113,
+      "voxel_after": 3257310,
+      "oa_before": 0.5562058908845986,
+      "oa_after": 0.5654702806917364,
+      "macc_before": 0.4988334823253718,
+      "macc_after": 0.5055070568183846,
+      "miou_before": 0.34891187962711956,
+      "miou_after": 0.3543783400592207,
+      "matched_before": 3126763,
+      "matched_after": 3257310
+    },
+    {
+      "tile": "Tile_53",
+      "extent": "65.8×82.6",
+      "raw_before": 18066352,
+      "raw_after": 17764568,
+      "voxel_before": 3026092,
+      "voxel_after": 3003071,
+      "oa_before": 0.5133899810411202,
+      "oa_after": 0.540092791678918,
+      "macc_before": 0.46197118577979845,
+      "macc_after": 0.4777824095805288,
+      "miou_before": 0.312843878312432,
+      "miou_after": 0.3284083831956862,
+      "matched_before": 2984881,
+      "matched_after": 3003071
+    },
+    {
+      "tile": "Tile_74",
+      "extent": "80.2×165.2",
+      "raw_before": 36109243,
+      "raw_after": 27117534,
+      "voxel_before": 7896207,
+      "voxel_after": 5871022,
+      "oa_before": 0.5074017945138339,
+      "oa_after": 0.5141716382599145,
+      "macc_before": 0.45965940732289656,
+      "macc_after": 0.47147544773506606,
+      "miou_before": 0.32210088541127474,
+      "miou_after": 0.32679154082434403,
+      "matched_before": 4521336,
+      "matched_after": 5871022
+    }
+  ],
+  "average": {
+    "oa_before": 0.5564803793224454,
+    "oa_after": 0.5670519073805711,
+    "macc_before": 0.4785687495252242,
+    "macc_after": 0.48542991944436387,
+    "miou_before": 0.32966145031957916,
+    "miou_after": 0.33467388243120205
+  },
+  "totals": {
+    "raw_before": 96536609,
+    "raw_after": 86087037,
+    "voxel_before": 18061980,
+    "voxel_after": 15871021
+  }
+}

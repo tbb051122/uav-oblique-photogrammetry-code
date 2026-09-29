@@ -1,0 +1,45 @@
+{
+  "tile": "Tile_74.las",
+  "bbox": [
+    610940.8358846174,
+    3836929.055696638,
+    611021.0236628004,
+    3837094.295551666
+  ],
+  "voxel": 0.05,
+  "after": {
+    "raw_points_in_box": 27117534,
+    "voxel_points": 5871022,
+    "extent": [
+      610940.8367576,
+      611021.0227576,
+      3836929.056473047,
+      3837094.294473047
+    ],
+    "seconds": 27.5
+  },
+  "before": {
+    "raw_points_in_box": 36109243,
+    "voxel_points": 7896207,
+    "tiles": [
+      {
+        "tile": "Tile_107.las",
+        "points_total": 35115587,
+        "points_in_box": 78074,
+        "seconds": 1.5
+      },
+      {
+        "tile": "Tile_108.las",
+        "points_total": 63363624,
+        "points_in_box": 35775831,
+        "seconds": 5.0
+      },
+      {
+        "tile": "Tile_111.las",
+        "points_total": 36633433,
+        "points_in_box": 255338,
+        "seconds": 1.5
+      }
+    ]
+  }
+}
