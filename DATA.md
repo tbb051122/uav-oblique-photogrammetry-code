@@ -12,6 +12,8 @@
 | `chapter4_training_data` | 四块代表性瓦片（Tile_27/37/53/74）5 cm 采样点云、预分类结果、训练样本 | — | ≈2.1 GB |
 | `chapter4_results` | 训练/测试结果、预测结果、剔除前后对比点云（npz/las/npy） | — | ≈2.5 GB |
 | `chapter4_others` | 消融实验、建筑提取结果、标注截图、实验过程截图 | — | ≈0.5 GB |
+| `osgb_before_2779` | 剔除冗余影像前导出的 OSGB 三维模型（111 个切块，含 Data 下各 Tile_* 分块） | 5136 | ≈4.35 GB |
+| `osgb_after_1865` | 剔除冗余影像后导出的 OSGB 三维模型（74 个切块，含 Data 下各 Tile_* 分块） | 4769 | ≈3.84 GB |
 
 说明：`SURVEY` 与 `SURVEY_optimized_T0.005` 中的影像文件一一对应，
 `data/image_screening/removed_image_list.txt` 给出了被剔除影像的文件名清单。
@@ -33,9 +35,11 @@ SURVEY_optimized_T0.005.part.001 … .004        剔除冗余影像后的影像�
 chapter4_training_data.part.001 … .002         四瓦片 5cm 点云、预分类、训练样本与模型（2.0 GB）
 chapter4_results.part.001 … .002               训练/测试、预测、剔除前后对比数据（2.4 GB）
 chapter4_others_and_figures.part.001           消融、建筑提取、截图与论文配图（0.1 GB）
+osgb_before_2779.part.001 … .003               剔除冗余影像前导出的 OSGB 模型，111 个切块（4.35 GB）
+osgb_after_1865.part.001 … .003                剔除冗余影像后导出的 OSGB 模型，74 个切块（3.84 GB）
 ```
 
-全部 18 卷合计约 26.6 GB，各卷按序号顺序合并即可还原。
+全部 24 卷合计约 34.8 GB，各卷按序号顺序合并即可还原。
 
 ## 三、还原方法
 
