@@ -44,7 +44,7 @@ data/training/02_训练日志_消融_无颜色特征.txt     无颜色特征模�
 data/training/03_训练日志_消融_无多尺度模块.txt   无多尺度模块训练日志
 本地训练产物（体积较大，未随仓库上传）：
 no_color/best_model.pth            无颜色特征模型权重
-no_multi_scale\best_model.pth      无多尺度模块模型权重
+no_multi_scale/best_model.pth      无多尺度模块模型权重
 论文插图（见仓库 figures/ 与 docs/说明_实验过程截图.txt）：
 图4-17 颜色特征对分割精度的影响、图4-18 颜色特征消融实验训练过程、
 图4-19 多尺度局部特征融合模块消融结果、图4-20 多尺度消融实验训练过程、
