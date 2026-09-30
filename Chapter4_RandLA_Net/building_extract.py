@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-建筑目标提取（对应论文 4.2.4）
+建筑目标提取（对应论文 3.3.4）
 
 流程：
 1. 从语义分割结果中筛选建筑类别点云；
@@ -27,7 +27,7 @@ from data_utils import read_point_cloud, voxel_downsample
 
 def dbscan_2d(points_xy, eps=2.0, min_samples=20):
     """
-    DBSCAN（论文 4.2.4 步骤 5）。
+    DBSCAN（论文 3.3.4 步骤 5）。
     使用 scipy.spatial.cKDTree 加速邻域查询。
     """
     try:
@@ -99,7 +99,7 @@ def extract_buildings(xyz, labels, building_class=1, eps=2.0, min_samples=20,
 
 
 def main():
-    parser = argparse.ArgumentParser(description="建筑目标提取（论文 4.2.4）")
+    parser = argparse.ArgumentParser(description="建筑目标提取（论文 3.3.4）")
     parser.add_argument("--cloud", required=True)
     parser.add_argument("--pred-file", default=None,
                         help="预测标签文件（与点云等长）；缺省读取点云自带标签列")

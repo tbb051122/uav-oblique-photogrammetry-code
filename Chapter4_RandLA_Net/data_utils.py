@@ -2,7 +2,7 @@
 """
 点云数据读取、预处理与数据集类
 ================================
-对应论文 4.3.1 数据预处理流程：
+对应论文 4.2.1 数据预处理流程：
 1. 异常点剔除（统计离群点）；
 2. 坐标归一化（统一到零均值单位尺度，保证训练稳定）；
 3. 点云采样（调整到网络输入数量 num_points）；
@@ -12,7 +12,7 @@
 * .npy / .txt：列为 x,y,z,r,g,b,label（可缺省部分列）；
 * .las / .laz：需要安装 laspy（laspy[lazrs]）。
 
-论文将 XYZ 与 RGB 融合为 XYZRGB 六维联合特征（4.2.2），
+论文将 XYZ 与 RGB 融合为 XYZRGB 六维联合特征（3.3.2），
 其中颜色通道归一到 [0, 1]，坐标归一到零均值单位尺度。
 """
 
@@ -99,7 +99,7 @@ def read_point_cloud(path):
 # ---------------------------------------------------------------------------
 def remove_statistical_outliers(xyz, k=16, std_ratio=2.0, colors=None, labels=None):
     """
-    统计离群点剔除（论文 4.3.1 步骤 1）：
+    统计离群点剔除（论文 4.2.1 步骤 1）：
     计算每个点与其 k 个近邻的平均距离，距离超过全局均值 ± std_ratio*标准差
     的点视为异常点。
     """
@@ -160,7 +160,7 @@ def voxel_downsample(xyz, voxel_size=0.5, colors=None, labels=None):
 
 def normalize_xyz(xyz, centroid=None, scale=None):
     """
-    坐标归一化（论文 4.3.1 步骤 2 / 4.2.2）：
+    坐标归一化（论文 4.2.1 步骤 2 / 3.3.2）：
         坐标减去质心，再除以最大点到质心距离，使点云落在单位球内。
     返回归一化坐标及可逆参数。
     """
@@ -187,7 +187,7 @@ def random_sample_cloud(xyz, n_target, colors=None, labels=None, rng=None):
 
 def augment_cloud(xyz, colors=None):
     """
-    数据增强（论文 4.3.1 步骤 4）：绕竖直轴随机旋转、随机缩放与抖动。
+    数据增强（论文 4.2.1 步骤 4）：绕竖直轴随机旋转、随机缩放与抖动。
     colors 通道不变（旋转不影响 RGB）。
     """
     rng = np.random.default_rng()
@@ -206,7 +206,7 @@ def augment_cloud(xyz, colors=None):
 
 def cloud_to_features(xyz, colors, use_color=True):
     """
-    构造网络输入特征（论文 4.2.2）：
+    构造网络输入特征（论文 3.3.2）：
     use_color=True  -> [x,y,z,r,g,b]（XYZRGB 六维联合特征）
     use_color=False -> [x,y,z]
     颜色已归一到 [0,1]（调用方保证）。

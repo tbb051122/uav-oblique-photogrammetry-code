@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-RandLA-Net 训练器（论文 4.4 实验）
+RandLA-Net 训练器（论文 4.2.4 实验）
 
-评价指标采用论文 4.3.2 定义的 OA / mAcc / mIoU，并根据验证集 mIoU
+评价指标采用论文 4.2.2 定义的 OA / mAcc / mIoU，并根据验证集 mIoU
 保存最优模型。
 """
 

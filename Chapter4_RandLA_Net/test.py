@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-模型测试与推理（论文 4.4 实验）
+模型测试与推理（论文 4.2.4 实验）
 
 * 数据集整体评估：OA / mAcc / mIoU / 逐类 IoU；
 * 单帧文件预测：输出每点类别并保存结果。
@@ -95,7 +95,7 @@ def test(data_dir, checkpoint_path, num_classes=NUM_CLASSES_DEFAULT,
     metrics = evaluate_loader(model, loader, num_classes, device)
 
     names = class_names or CLASS_NAMES
-    print("\n===== 测试结果（论文 4.3.2 指标） =====")
+    print("\n===== 测试结果（论文 4.2.2 指标） =====")
     print("总体准确率 OA   : {:.4f}".format(metrics["oa"]))
     print("平均类别精度 mAcc: {:.4f}".format(metrics["macc"]))
     print("平均交并比 mIoU : {:.4f}".format(metrics["miou"]))

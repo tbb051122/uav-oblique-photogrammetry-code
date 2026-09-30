@@ -73,6 +73,7 @@ python building_extract.py --input <LAS 点云> --out_dir <输出目录>
 | 4.2.3 节 | 影像优化对点云语义分割的影响分析 | `Chapter4_RandLA_Net/predict_blocks.py`、`prepare_blocks.py` |
 | 4.2.7 节 | 建筑目标提取效果分析 | `Chapter4_RandLA_Net/building_extract.py`、`render_annotation_figures.py` |
 
+上表按论文定稿章节号列出对应关系；`data/` 下各 `README_说明.txt` 中的章节号也已对齐定稿编号。
 论文中的统计数字与 `data/` 目录下的 JSON/CSV 一一对应，例如
 `data/pointcloud_comparison/summary.json` 对应表 4-6、表 4-7，
 `data/ablation/ablation_metrics.json` 对应表 4-10、表 4-11，

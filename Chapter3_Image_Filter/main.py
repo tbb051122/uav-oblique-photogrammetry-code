@@ -2,14 +2,14 @@
 """
 基于空间覆盖分析的倾斜摄影低贡献影像筛选（论文第 3 章）
 
-流程（对应论文 3.3.4）：
+流程（对应论文 2.6.4）：
     1. 获取无人机影像及 POS 信息；
     2. 读取相机内外参数；
     3. 计算每幅影像的地面投影范围；
-    4. 建立研究区域空间网格（3.3.1）；
-    5. 用射线法判断影像覆盖关系（3.2.3、3.3.1）；
-    6. 计算影像覆盖贡献评分（3.3.2）；
-    7. 按阈值筛选低贡献影像并保证测区完整覆盖（3.3.3）；
+    4. 建立研究区域空间网格（2.6.1）；
+    5. 用射线法判断影像覆盖关系（2.5.3、2.6.1）；
+    6. 计算影像覆盖贡献评分（2.6.2）；
+    7. 按阈值筛选低贡献影像并保证测区完整覆盖（2.6.3）；
     8. 输出优化影像集合，供 ContextCapture 三维重建使用。
 
 示例:
@@ -75,7 +75,7 @@ def parse_args(argv=None):
     parser.add_argument("--area-margin", type=float, default=50.0,
                         help="由影像范围自动生成测区时外扩的边距（米）")
     parser.add_argument("--grid-size", type=float, default=20.0,
-                        help="测区网格尺寸 d（米），论文 3.3.1")
+                        help="测区网格尺寸 d（米），论文 2.6.1")
     parser.add_argument("--ref-elevation", type=float, default=0.0,
                         help="参考地面高程 z_ref（米），用于摄影光线求交")
     parser.add_argument("--ref-lon", type=float, default=None,
@@ -83,7 +83,7 @@ def parse_args(argv=None):
     parser.add_argument("--ref-lat", type=float, default=None,
                         help="局部坐标原点纬度（默认取 POS 均值）")
 
-    # 筛选参数（论文 3.3.2 / 3.3.3）
+    # 筛选参数（论文 2.6.2 / 2.6.3）
     parser.add_argument("--alpha", type=float, default=0.5,
                         help="覆盖范围权重 alpha（论文默认 0.5）")
     parser.add_argument("--beta", type=float, default=0.5,
@@ -314,7 +314,7 @@ def _study_area(records, footprints, args):
 
 
 def _compute_footprints(records, camera, args):
-    """逐幅影像计算地面覆盖多边形（论文 3.2.2）。"""
+    """逐幅影像计算地面覆盖多边形（论文 2.5.2）。"""
     footprints = []
     valid_records = []
     invalid = 0
@@ -446,7 +446,7 @@ def _print_summary(records, keep_flags):
     n_keep = int(keep_flags.sum())
     n_drop = n_all - n_keep
     ratio = n_drop / n_all * 100.0 if n_all else 0.0
-    print("\n===== 影像筛选结果（论文 3.4.2 指标） =====")
+    print("\n===== 影像筛选结果（论文 4.1.2 指标） =====")
     print("原始影像数量 N = {}".format(n_all))
     print("优化后影像数量 M = {}".format(n_keep))
     print("减少数量 N - M = {}".format(n_drop))

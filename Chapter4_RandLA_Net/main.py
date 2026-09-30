@@ -42,7 +42,7 @@ def parse_args():
     parser.add_argument("--use_color", action="store_true", default=True)
     parser.add_argument("--no_color", action="store_true")
     parser.add_argument("--no_multi_scale", action="store_true",
-                        help="消融：关闭多尺度局部特征融合模块（4.4.3）")
+                        help="消融：关闭多尺度局部特征融合模块（4.2.6）")
     parser.add_argument("--device", type=str, default="cuda",
                         choices=["cuda", "cpu"])
     parser.add_argument("--log_file", type=str, default=None)

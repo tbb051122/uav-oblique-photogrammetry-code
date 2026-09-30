@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-影像覆盖贡献评价与低贡献影像筛选（对应论文 3.3.2、3.3.3）
+影像覆盖贡献评价与低贡献影像筛选（对应论文 2.6.2、2.6.3）
 
 1. 基础覆盖率 bi = 影像覆盖的网格数 / 测区网格总数；
 2. 新增覆盖率 di = 处理顺序中该影像“新覆盖”的网格数 / 网格总数
    （与已保留影像重叠越多，新增贡献越低）；
 3. 综合贡献评分 Si = alpha * bi + beta * di，论文取 alpha = beta = 0.5；
 4. 按评分降序排序，评分低于阈值 T 的影像标记为低贡献候选影像；
-   为保证“优化后影像集合仍保持测区完整覆盖”（论文 3.3.3），
+   为保证“优化后影像集合仍保持测区完整覆盖”（论文 2.6.3），
    必要时从低贡献候选中按新增覆盖最大原则补回影像。
 """
 
@@ -30,7 +30,7 @@ def coverage_score(image_polygon, sample_points):
 
 def build_coverage_matrix(footprints, sample_points) -> np.ndarray:
     """
-    构建影像-网格覆盖关系矩阵（论文 3.3.1 的 m_ij 矩阵）。
+    构建影像-网格覆盖关系矩阵（论文 2.6.1 的 m_ij 矩阵）。
 
     参数:
         footprints:    每幅影像的地面覆盖多边形列表
@@ -90,7 +90,7 @@ def optimize_image_set(cover_matrix: np.ndarray,
                        threshold: float = 0.1,
                        ensure_full_coverage: bool = True):
     """
-    低贡献影像筛选（论文 3.3.3）。
+    低贡献影像筛选（论文 2.6.3）。
 
     参数:
         cover_matrix:          影像-网格覆盖矩阵 (I, J)
